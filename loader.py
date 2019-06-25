@@ -30,5 +30,6 @@ def load_json_file(json_file):
             logger.log_error(result)
 
 def load_csv_file(csv_file):
+    with open(csv_file, encoding='utf-8') as data_file:
 
 
