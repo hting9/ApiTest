@@ -1,0 +1,18 @@
+name: login
+variables:
+    tenantCode:
+    userName:
+    password:
+request:
+    url: https://passport.myysq.com.cn/api/login-v2
+    method: POST
+    headers:
+        Content-Type: application/x-www-form-urlencoded
+    data:
+        tenantCode: mysoft
+        userName: mysoft
+        password: my!@#456
+
+validate:
+    - eq: ["status_code", 200]
+    - eq: ["content.message", "登录验证成功"]
