@@ -1,7 +1,6 @@
-import csv
-import yaml
-import json
-import logger
+import csv,yaml,json
+import os
+import logger,utils
 
 def _check_format(file_path, content):
     """ check testcase format if valid
@@ -41,7 +40,21 @@ def load_csv_file(csv_file):
     return csv_content_list
 
 def load_file(file_path):
-    pass
+    file_suffix = os.path.splitext(file_path)[1].lower()
+    if file_suffix == '.json':
+        return load_json_file(file_path)
+    elif file_suffix in ['.yaml', '.yml']:
+        return load_yaml_file(file_path)
+    elif file_suffix == ".csv":
+        return load_csv_file(file_path)
+    else:
+        err_msg = u"Unsupported file format: {}".format(file_path)
+        logger.log_warning(err_msg)
+        return []
+
+
 
 def load_testcase():
     pass
+
+
