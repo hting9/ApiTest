@@ -28,8 +28,20 @@ def load_json_file(json_file):
             json_content= json.load(data_file)
         except Exception as result:
             logger.log_error(result)
+        _check_format(json_file, json_content)
+        return json_content
+
 
 def load_csv_file(csv_file):
+    csv_content_list = []
     with open(csv_file, encoding='utf-8') as data_file:
+        reader = csv.DictReader(data_file)
+        for row in reader:
+            csv_content_list.append(row)
+    return csv_content_list
 
+def load_file(file_path):
+    pass
 
+def load_testcase():
+    pass
