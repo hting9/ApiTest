@@ -52,8 +52,6 @@ def load_file(file_path):
         logger.log_warning(err_msg)
         return []
 
-
-
 def load_testcase():
     pass
 

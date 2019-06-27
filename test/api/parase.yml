@@ -4,11 +4,13 @@ request:
     method: POST
     headers:
         Content-Type: application/json
-    data:
+    proxies:
+        http: http://127.0.0.1:8888
+    json:
         message_id: a0657eeb-721b-498d-9a6f-24ba3ec50089
         to_id: B5EB33EFAA24FD4ED3C01A153C0E4BF7
         from_info: 苹果树
-        content:  2019-5-8  0.46Y+2Y 16通用01 136738.SH 3.30  行权 AAA  2800  下周一固收 苹果树出给博时基金，谢谢！\n大同证券 郭薇薇 010-65857286
+        content:  $content
         type:  1
         to_info: 博时基金
         from_id: D71FB957BFFE67F984B0E73C31BF6BB1

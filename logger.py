@@ -26,5 +26,5 @@ def log_warning(message):
 def log_error(message):
     return setup_logger().error(message)
 
-log_warning("1222222")
+
 

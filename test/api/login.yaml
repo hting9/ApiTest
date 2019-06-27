@@ -9,9 +9,9 @@ request:
     headers:
         Content-Type: application/x-www-form-urlencoded
     data:
-        tenantCode: mysoft
-        userName: mysoft
-        password: my!@#456
+        tenantCode:
+        userName:
+        password:
 
 validate:
     - eq: ["status_code", 200]
