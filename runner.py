@@ -8,8 +8,9 @@ def run_test(file_path):
     req_kwargs = test_data['request']
     url = req_kwargs.pop('url')
     method = req_kwargs.pop('method')
-    print(req_kwargs)
+    print(test_data)
     resp_obj = requests.request(url=url, method=method,**req_kwargs)
     return resp_obj
 
 
+run_test("E:/BaiduNetdiskDownload/ApiTest/test/api/parase.yml")

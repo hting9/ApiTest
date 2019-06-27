@@ -1,6 +1,6 @@
 import configparser
 import os
-
+import re
 
 def get_config_data(section,option,config_file="config.ini"):
 
